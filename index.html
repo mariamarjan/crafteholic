@@ -50,7 +50,7 @@
     <!--banner-->
     <section id="home" class="hero" aria-label="Hero">
       <div class="hero-left">
-        <h1>Discover handmade crafts you’ll love</h1>
+        <h1>Discover handmade crafts<br> you’ll love</h1>
         <p>Curated selection of small-batch handmade items — paper flowers, gift boxs, resin items, and more. Browse the collection, add to your cart, and place your order with a secure confirmation step.</p>
         <div class="explore">
           <button class="btn" id="exploreBtn">Explore More</button>
@@ -63,10 +63,135 @@
         </div>
       </div>
     </section>
+    
+    <!-- PRODUCT SECTION -->
+<section id="products" class="container" aria-label="Products">
+  <h2 class="section-title">Featured Products</h2>
+
+  <div class="grid" id="productsGrid">
+
+    <!-- Product 1 -->
+    <article class="card">
+      <img src="images/img-01.jpg" class="product-img">
+      <h3 class="font-bold text-2xl">Chocolate Box</h3>
+      <p class="muted">Handmade chocolates in a premium gift box.</p>
+      <div class="price">৳1200</div>
+      <button class="btn">Add to cart</button>
+    </article>
+
+    <!-- Product 2 -->
+    <article class="card">
+      <img src="images/resin-9.jpg" class="product-img">
+      <h3 class="font-bold text-2xl">Photo Key Ring</h3>
+      <p class="muted">Tiny snapshots of memories collected with love.</p>
+      <div class="price">৳170</div>
+      <button class="btn">Add to cart</button>
+    </article>
+
+    <!-- Product 3 -->
+    <article class="card">
+      <img src="images/img-03.jpg" class="product-img">
+      <h3 class="font-bold text-2xl">Hexagonal Explosion Box</h3>
+      <p class="muted">A box full of surprises unfolding layer by layer.</p>
+      <div class="price">৳1500</div>
+      <button class="btn">Add to cart</button>
+    </article>
+
+    <!-- Product 4 -->
+    <article class="card">
+      <img src="images/resin-01.jpg" class="product-img">
+      <h3 class="font-bold text-2xl">Spotify and letter key ring</h3>
+      <p class="muted">Cute tiny cactus decor for your desk.</p>
+      <div class="price">৳350</div>
+      <button class="btn">Add to cart</button>
+    </article>
+  </div>
+
+  <!-- View More Button -->
+  <div style="text-align:center;margin-top:20px;">
+    <button id="viewMore" class="btn secondary">View All Products</button>
+  </div>
+</section>
+
+<script>
+document.getElementById("viewMore").addEventListener("click", () => {
+
+  const more = `
+    <article class="card">
+      <img src="images/resin-02.jpg" class="product-img">
+      <h3 class="font-bold text-2xl"> Pendent </h3>
+      <p class="muted">Lightweight and classy,ideal for everyday wear.</p>
+      <div class="price">৳170</div>
+      <button class="btn">Add to Cart</button>
+    </article>
+
+    <article class="card">
+      <img src="images/resin-03.jpg" class="product-img">
+      <h3 class="font-bold text-2xl">Letter Key Ring</h3>
+      <p class="muted">Carry your favorite memories,
+right on your keys.</p>
+      <div class="price">৳170</div>
+      <button class="btn">Add to Cart</button>
+    </article>
+
+    <article class="card">
+      <img src="images/resin-04.jpg" class="product-img">
+      <h3 class="font-bold text-2xl">Letter Key Ring</h3>
+      <p class="muted">A cute key ring with a letter,perfect for gifts or yourself..</p>
+      <div class="price">৳170</div>
+      <button class="btn">Add to Cart</button>
+    </article>
+
+    <article class="card">
+      <img src="images/resin-5.jpg" class="product-img">
+      <h3 class="font-bold text-2xl">Pendent</h3>
+      <p class="muted">A tiny charm that makes you smile,every time you hold it.</p>
+      <div class="price">৳170</div>
+      <button class="btn">Add to Cart</button>
+    </article>
+
+    <article class="card">
+      <img src="images/resin-6.jpg" class="product-img">
+      <h3 class="font-bold text-2xl">Letter Key Ring</h3>
+      <p class="muted">Keep your favorite letter close, everywhere you go.</p>
+      <div class="price">৳170</div>
+      <button class="btn">Add to Cart</button>
+    </article>
+
+    <article class="card">
+      <img src="images/flower.jpg" class="product-img">
+      <h3 class="font-bold text-2xl">Flower Hijab Bouquet</h3>
+      <p class="muted">Beautiful flowers wrapped with care, made to brighten your hijab style.
+</p>
+      <div class="price">৳550</div>
+      <button class="btn">Add to Cart</button>
+    </article>
+
+    <article class="card">
+      <img src="images/resin-7.jpg" class="product-img">
+      <h3 class="font-bold text-2xl">Letter Key Ring</h3>
+      <p class="muted">Personalized letter key ring, a small charm for your keys.</p>
+      <div class="price">৳170</div>
+      <button class="btn">Add to Cart</button>
+    </article>
+
+    
+  `;
+
+  document.getElementById("productsGrid").innerHTML += more;
+  document.getElementById("viewMore").style.display = "none";
+});
+</script>
+
+
+    
+    
 
 
   </main>
+  <footer>
 
-  
+  </footer>
+ 
 </body>
 </html>
