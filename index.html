@@ -4,6 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <!-- fornt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <!-- forntawesome -->
+  <script src="https://kit.fontawesome.com/d2b541e65b.js" crossorigin="anonymous"></script>
+  <!-- tailwind -->
+   <script src="https://cdn.tailwindcss.com"></script>
+
+   <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          clifford: '#da373d', 
+        }
+      }
+    }
+  }
+</script>
   <title>Crafteholic</title>
 </head>
 <body>
@@ -11,7 +31,8 @@
     <div class="topbar">
       <div class="logo">Crafteholic<span style="color:var(--accent-2)"></span></div>
       <nav>
-        <div class="navlinks">
+        <div class="spacer"></div>
+        <div class="navlinks ">
         <a href="#home">Home</a>
         <a href="#products">Products</a>
         <a href="#about">About</a>
@@ -24,6 +45,27 @@
       <button class="btn" id="openCart">Cart (<span id="cartCount">0</span>)</button>
     </div>
   </header>
+
+  <main>
+    <!--banner-->
+    <section id="home" class="hero" aria-label="Hero">
+      <div class="hero-left">
+        <h1>Discover handmade crafts you’ll love</h1>
+        <p>Curated selection of small-batch handmade items — paper flowers, gift boxs, resin items, and more. Browse the collection, add to your cart, and place your order with a secure confirmation step.</p>
+        <div class="explore">
+          <button class="btn" id="exploreBtn">Explore More</button>
+          <button class="btn secondary" id="viewAllBtn">View All Products</button>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <div class="banner-image">
+          <img src="images/logo.png" alt="Craft Banner">
+        </div>
+      </div>
+    </section>
+
+
+  </main>
 
   
 </body>

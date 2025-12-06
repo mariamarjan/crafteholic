@@ -1,23 +1,47 @@
 :root{
     --bg:#fffaf6;
-    --card:#fff7f0;
-    --accent:#cb6fba;
-    --accent-2:#cb6fba;
+    --card:#e7cfdf;
+    --accent:#cfa4c7;
+    --accent-2:#c8a1c1;
     --muted:#8a8a8a;
-    --green:#2aa06b;
+    --green:#ceb0c8;
     --glass: rgba(255,255,255,0.85);
     --shadow: 0 6px 18px rgba(33,33,33,0.08);
     --radius:14px;
     font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:linear-gradient(180deg,#f8f6f3 0%, #fff 100%);color:#2b2b2b}
-  header{background:var(--glass);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(0,0,0,0.03);backdrop-filter: blur(6px)}
-  .topbar{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:18px}
+  body{
+    margin:0;
+    background:linear-gradient(180deg,#f8f6f3 0%, #fff 100%);
+    color:#2b2b2b
+}
+  header{
+    background:var(--glass);
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:1px solid rgba(0,0,0,0.03);
+    backdrop-filter: blur(6px)
+}
+  .topbar{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:18px;
+    position: relative;
+}
   .logo{font-weight:800;color:var(--accent);font-size:20px}
   nav{margin-left:10px}
-  .navlinks{display:flex;gap:18px;align-items:center}
-  .navlinks a{color:#303030;text-decoration:none;padding:6px 10px;border-radius:10px}
+  .navlinks{display:flex;
+    gap:18px;
+    align-items:center}
+  .navlinks a{color:#303030;
+    text-decoration:none;
+    padding:6px 10px;
+    border-radius:10px}
   .navlinks a:hover{background:rgba(0,0,0,0.04)}
   .spacer{flex:1}
   .btn{display:inline-block;padding:10px 16px;border-radius:999px;border:none;background:var(--accent);color:#fff;cursor:pointer;font-weight:600}
@@ -27,4 +51,22 @@
   .hero-left p{color:var(--muted);line-height:1.6}
   .explore{margin-top:18px}
   .hero-illustration{display:flex;align-items:center;justify-content:center}
-  .banner-image{width:100%;height:260px;border-radius:12px;background:linear-gradient(180deg,#e6f8f0,#fff);display:flex;align-items:center;justify-content:center;border:6px solid #2fc090}
+  .banner-image {
+    width: 100%;
+    max-width: 420px;   /* jodi limit rakhte chao */
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(180deg,#e6f8f0,#fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(215, 150, 215, 0.15);
+  }
+  
+  .banner-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  
