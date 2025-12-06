@@ -169,7 +169,112 @@ section{
   --container-padding: 0.5px;
 }
 
-  
+  /*About*/
+  /* Section container */
+.about-section {
+  margin-top: 28px;
+  padding: 30px 150px;
+  background-color: #ede4eb;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111111; /* Deep lavender */
+  margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.about-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #0f0f0f;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Lavender highlight text */
+.highlight {
+  color: #060606;
+  font-weight: 600;
+}
+
+/* Stronger highlight for customization line */
+.highlight-bold {
+  color: #070707;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/*review*/
+section{
+  font-family: Arial;
+  background:#f4f4f4;
+  margin:0;
+  padding:30px;
+}
+
+.wrap{
+  max-width:1000px;
+  margin:auto;
+}
+
+.main-title{
+  font-size:35px;
+  margin-bottom:10px;
+}
+
+.heart{
+  color:#ff3da6;
+}
+
+.subtitle{
+  color:#666;
+  margin-bottom:25px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.card{
+  background:white;
+  padding:15px;
+  border-radius:12px;
+  border:1px solid #ddd;
+}
+
+.name{
+  font-weight:700;
+  margin:0 0 4px 0;
+}
+
+.time{
+  color:#777;
+  font-size:13px;
+  margin:0 0 8px 0;
+}
+
+.stars{
+  color:#f6b301;
+  margin:0 0 10px 0;
+}
+
+.text{
+  color:#333;
+  font-size:14px;
+  line-height:20px;
+  margin-bottom:15px;
+}
+
+.see{
+  color:#2563eb;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+}
 
 
 
