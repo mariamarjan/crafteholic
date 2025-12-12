@@ -41,7 +41,7 @@
         <a href="#products">Products</a>
         <a href="#reviews">Reviews</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Contact Us</a>
   
         <!-- Buttons added inside mobile menu -->
         <button class="btn secondary mobile-btn" id="loginBtn-m">Log in</button>
@@ -95,162 +95,59 @@ overlay.onclick = () => {
 
   </script>
 
-   
 
-    <!-- PRODUCT SECTION -->
-<section id="products" class="container" aria-label="Products">
-  <h2 class="section-title font-bold"> Products</h2>
 
-  <div class="grid" id="productsGrid">
+<!-- PRODUCT SECTION -->
+<section id="products" class="container mx-auto px-4 py-10" aria-label="Products">
+  <h2 class="section-title font-bold text-3xl mb-6 text-center">Products</h2>
 
-    <!-- Product 1 -->
-    <article class="card">
-      <img src="images/img-01.jpg" class="product-img">
-      <h3 class="font-bold text-2xl">Chocolate Box</h3>
-      <p class="muted">Handmade chocolates gift box - perfect for sharing love and sweet moment .</p>
-      <div class="price">৳1200</div>
-      <button class="btn">Add to cart</button>
-    </article>
+  <!-- CATEGORY CARDS -->
+  <div id="categorySection"
+       class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-    <!-- Product 2 -->
-    <article class="card">
-      <img src="images/resin-9.jpg" class="product-img">
-      <h3 class="font-bold text-2xl">Photo Key Ring</h3>
-      <p class="muted">Tiny snapshots of memories collected with love.</p>
-      <div class="price">৳170</div>
-      <button class="btn">Add to cart</button>
-    </article>
+    <!-- Paper Works -->
+    <div class="card p-4 shadow rounded-xl bg-white">
+      <img src="images/paper-cover.jpg"
+           class="product-img w-full h-56 object-cover rounded-xl">
+      <h3 class="font-bold text-2xl mt-3">Paper Works</h3>
+      <p class="muted">Handmade paper crafts, gift boxes & more.</p>
+      <button id="openPaper"
+              class="btn bg-blue-500 text-white px-4 py-2 rounded mt-3 w-full">
+        View All Paper Works
+      </button>
+    </div>
 
-    <!-- Product 3 -->
-    <article class="card">
-      <img src="images/img-03.jpg" class="product-img">
-      <h3 class="font-bold text-2xl">Hexagonal Explosion Box</h3>
-      <p class="muted">A box full of surprises unfolding layer by layer.</p>
-      <div class="price">৳1500</div>
-      <button class="btn">Add to cart</button>
-    </article>
+    <!-- Resin Works -->
+    <div class="card p-4 shadow rounded-xl bg-white">
+      <img src="images/resin-cover.jpg"
+           class="product-img w-full h-56 object-cover rounded-xl">
+      <h3 class="font-bold text-2xl mt-3">Resin Works</h3>
+      <p class="muted">Customized key rings, pendants & resin crafts.</p>
+      <button id="openResin"
+              class="btn bg-blue-500 text-white px-4 py-2 rounded mt-3 w-full">
+        View All Resin Works
+      </button>
+    </div>
 
-    <!-- Product 4 -->
-    <article class="card">
-      <img src="images/resin-01.jpg" class="product-img">
-      <h3 class="font-bold text-2xl">Spotify and letter key ring</h3>
-      <p class="muted">Cute tiny cactus decor for your desk.</p>
-      <div class="price">৳350</div>
-      <button class="btn">Add to cart</button>
-    </article>
   </div>
 
-  <!-- View More Button -->
-  <div style="text-align:center;margin-top:20px;">
-    <button id="viewMore" class="btn secondary shadow px-4 py-2 bg-blue-400 ">View All Products</button>
+  <!-- VIEW ALL BUTTON -->
+  <div id="viewMoreBox" class="text-center mt-6">
+    <button id="viewMore"
+            class="btn bg-purple-600 text-white px-5 py-2 rounded-lg w-full sm:w-auto">
+      View All Products
+    </button>
   </div>
+
+  <!-- FULL PRODUCT GRID -->
+  <div id="fullProducts"
+       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 hidden">
+  </div>
+
 </section>
 
-<script>
-document.getElementById("viewMore").addEventListener("click", () => {
 
-  const more = `
-    <article class="card">
-      <img src="images/resin-02.jpg" class="product-img">
-      <h3 class="font-bold text-2xl"> Pendent </h3>
-      <p class="muted">Lightweight and classy,ideal for everyday wear.</p>
-      <div class="price">৳170</div>
-      <button class="btn">Add to Cart</button>
-    </article>
-
-    <article class="card">
-      <img src="images/resin-03.jpg" class="product-img">
-      <h3 class="font-bold text-2xl">Letter Key Ring</h3>
-      <p class="muted">Carry your favorite memories,
-right on your keys.</p>
-      <div class="price">৳170</div>
-      <button class="btn">Add to Cart</button>
-    </article>
-
-    <article class="card">
-      <img src="images/resin-04.jpg" class="product-img">
-      <h3 class="font-bold text-2xl">Letter Key Ring</h3>
-      <p class="muted">A cute key ring with a letter,perfect for gifts or yourself..</p>
-      <div class="price">৳170</div>
-      <button class="btn">Add to Cart</button>
-    </article>
-
-    <article class="card">
-      <img src="images/resin-5.jpg" class="product-img">
-      <h3 class="font-bold text-2xl">Pendent</h3>
-      <p class="muted">A tiny charm that makes you smile,every time you hold it.</p>
-      <div class="price">৳170</div>
-      <button class="btn">Add to Cart</button>
-    </article>
-
-    <article class="card">
-      <img src="images/resin-6.jpg" class="product-img">
-      <h3 class="font-bold text-2xl">Letter Key Ring</h3>
-      <p class="muted">Keep your favorite letter close, everywhere you go.</p>
-      <div class="price">৳170</div>
-      <button class="btn">Add to Cart</button>
-    </article>
-
-    <article class="card">
-      <img src="images/flower.jpg" class="product-img">
-      <h3 class="font-bold text-2xl">Flower Hijab Bouquet</h3>
-      <p class="muted">Beautiful flowers wrapped with care, made to brighten your hijab style.
-</p>
-      <div class="price">৳550</div>
-      <button class="btn">Add to Cart</button>
-    </article>
-
-    <article class="card">
-      <img src="images/img-5.jpg" class="product-img">
-      <h3 class="font-bold text-2xl"></h3>
-      <p class="muted"></p>
-      <div class="price"></div>
-      <button class="btn">Add to Cart</button>
-    </article>
-     
-    <article class="card">
-      <img src="images/img-6.jpg" class="product-img">
-      <h3 class="font-bold text-2xl"></h3>
-      <p class="muted"></p>
-      <div class="price"></div>
-      <button class="btn"></button>
-    </article>
-    <article class="card">
-      <img src="images/img-7.jpg" class="product-img">
-      <h3 class="font-bold text-2xl"></h3>
-      <p class="muted"></p>
-      <div class="price"></div>
-      <button class="btn">Add to Cart</button>
-    </article>
-    <article class="card">
-      <img src="images/img-8.jpg" class="product-img">
-      <h3 class="font-bold text-2xl"></h3>
-      <p class="muted"></p>
-      <div class="price"></div>
-      <button class="btn">Add to Cart</button>
-    </article>
-    <article class="card">
-      <img src="images/img-9.jpg" class="product-img">
-      <h3 class="font-bold text-2xl"></h3>
-      <p class="muted"></p>
-      <div class="price"></div>
-      <button class="btn">Add to Cart</button>
-    </article>
-
-    <article class="card">
-      <img src="images/img-10.jpg" class="product-img">
-      <h3 class="font-bold text-2xl"></h3>
-      <p class="muted"></p>
-      <div class="price"></div>
-      <button class="btn">Add to Cart</button>
-    </article>
-    
-  `;
-
-  document.getElementById("productsGrid").innerHTML += more;
-  document.getElementById("viewMore").style.display = "none";
-});
-</script>
+   
 
  <!--About-->
 <section id="about" class="about-section">
@@ -325,6 +222,48 @@ right on your keys.</p>
   
 </section>
     
+<section id="contact" class="contact-section">
+  <h2 class="contact-title">Contact Us</h2>
+
+  <div class="contact-grid">
+
+    
+
+    <!-- Call -->
+    <div class="contact-card">
+      <div class="icon">&#128222;</div>
+      <h3>CALL US</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel.</p>
+      <a href="tel:+8801700000000" class="contact-link">+880 1700-000000</a>
+    </div>
+
+    <!-- Email -->
+    <div class="contact-card">
+      <div class="icon">&#9993;</div>
+      <h3>EMAIL US</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel.</p>
+      <a href="mailto:example@gmail.com" class="contact-link">example@gmail.com</a>
+    </div>
+
+    <!-- Facebook -->
+    <div class="contact-card">
+      <div class="icon">📘</div>
+      <h3>FACEBOOK</h3>
+      <p>Follow us on Facebook for updates and offers!</p>
+      <a href="#" class="contact-link" id="fbLink">Facebook Page</a>
+    </div>
+
+    <!-- Instagram -->
+    <div class="contact-card">
+      <div class="icon">📸</div>
+      <h3>INSTAGRAM</h3>
+      <p>See our new posts, reels and product pictures.</p>
+      <a href="#" class="contact-link" id="instaLink">Instagram Profile</a>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- Login Modal -->
 
@@ -353,12 +292,8 @@ right on your keys.</p>
 
       <button type="submit" class="w-full bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600 transition">Log In</button>
 
-      <div class="text-center my-2 text-gray-400">or</div>
 
-      <!-- Google Login -->
-      <button type="button" class="w-full border border-gray-300 rounded-md py-2 flex items-center justify-center hover:bg-gray-100 transition">
-        <img src="images/google-icon.png" alt="Google" class="w-5 h-5 mr-2"> Continue with Google
-      </button>
+      
     </form>
   </div>
 </div>
@@ -592,6 +527,73 @@ logoutBtn.addEventListener("click",()=>{
     overlay.classList.toggle("show"); };
      overlay.onclick = ()=>{ navbar.classList.remove("show");
       overlay.classList.remove("show"); }; 
+
+</script>
+
+
+<script>
+  // PAPER PRODUCTS
+const paperProducts = [
+  { img: "images/img-01.jpg", name: "Chocolate Box", price: "1200", desc: "Handmade chocolate gift box." },
+  { img: "images/img-03.jpg", name: "Explosion Box", price: "1500", desc: "Layered surprise box." },
+];
+
+// RESIN PRODUCTS
+const resinProducts = [
+  { img: "images/resin-01.jpg", name: "Spotify Key Ring", price: "350", desc: "Custom resin key ring." },
+  { img: "images/resin-03.jpg", name: "Letter Key Ring", price: "170", desc: "Carry your memories." }
+];
+
+// SHOW PRODUCTS FUNCTION
+function showProducts(list) {
+  const place = document.getElementById("fullProducts");
+  place.innerHTML = "";
+
+  list.forEach(p => {
+    place.innerHTML += `
+      <div class="card p-4 shadow rounded-xl bg-white">
+        <img src="${p.img}" class="product-img w-full h-56 object-cover rounded-xl">
+        <h3 class="font-bold text-xl mt-2">${p.name}</h3>
+        <p class="muted">${p.desc}</p>
+        <div class="price">৳${p.price}</div>
+        <button class="btn bg-blue-500 text-white px-4 py-2 rounded w-full mt-2">Add to Cart</button>
+      </div>
+    `;
+  });
+
+  place.classList.remove("hidden");
+}
+
+// BUTTON ACTIONS
+document.getElementById("openPaper").onclick = () => {
+  document.getElementById("categorySection").style.display = "none";
+  document.getElementById("viewMoreBox").style.display = "none";
+  showProducts(paperProducts);
+};
+
+document.getElementById("openResin").onclick = () => {
+  document.getElementById("categorySection").style.display = "none";
+  document.getElementById("viewMoreBox").style.display = "none";
+  showProducts(resinProducts);
+};
+
+document.getElementById("viewMore").onclick = () => {
+  document.getElementById("categorySection").style.display = "none";
+  document.getElementById("viewMoreBox").style.display = "none";
+  showProducts([...paperProducts, ...resinProducts]);
+};
+
+</script>
+
+<!--contact-->
+<script>
+  document.getElementById("fbLink").onclick = () => {
+  window.open("https://facebook.com/YOUR_PAGE", "_blank");
+}
+
+document.getElementById("instaLink").onclick = () => {
+  window.open("https://instagram.com/YOUR_ACCOUNT", "_blank");
+}
 
 </script>
 
